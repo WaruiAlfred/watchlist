@@ -48,7 +48,7 @@ def search(movie_name):
   title = f'search results for {movie_name}'
   return render_template('search.html',movies = searched_movies)
 
-@main.route('/movie/reviews/new/<int:id>',methods = ['GET','POATS'])
+@main.route('/movie/reviews/new/<int:id>',methods = ['GET','POST'])
 def new_review(id): 
   form = ReviewForm()
   movie = get_movie(id) 
