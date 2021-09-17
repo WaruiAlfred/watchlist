@@ -19,7 +19,7 @@ def test():
 def make_shell_context(): 
   return dict(app = app,db = db, User = User, Role = Role )
 
-migrate = Migrate(app,db)
+migrate = Migrate(app,db,compare_type=True)
 manager.add_command('db',MigrateCommand)
 
 if __name__ == '__main__': 
